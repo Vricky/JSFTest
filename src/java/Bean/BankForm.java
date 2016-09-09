@@ -5,16 +5,19 @@
  */
 package Bean;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-
+import java.io.Serializable;
+//import javax.faces.bean.ManagedBean;              //用ManagedBean时需要的包
+//import javax.faces.bean.SessionScoped;            //用ManagedBean时需要的包
+import javax.inject.Named;                          //用@Named时需要的包
+import javax.enterprise.context.SessionScoped;      //用@Named时需要的包
 /**
  *
  * @author Vricky
  */
-@ManagedBean
+//@ManagedBean
+@Named
 @SessionScoped
-public class BankForm {
+public class BankForm implements Serializable{
 
     /**
      * Creates a new instance of BankForm
